@@ -1,0 +1,27 @@
+<div layout="row" layout-align="center start">
+  <h1>Noticias</h1>
+</div>
+
+<div layout layout-wrap>
+  <md-card md-colors="{background: 'blue-900'}" flex="30" flex-xs="100" ng-repeat="noticia in vm.noticias">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{ noticia.titular }}</span>
+      </md-card-title-text>
+    </md-card-title>
+    <img ng-src="{{ noticia.imagen }}">
+    <md-card-content>
+      <p>Entrada: {{ noticia.entrada }}</p>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="start center">
+      <md-button class="md-raised">Ver Pelicula</md-button>
+    </md-card-actions>
+  </md-card>
+
+</div>
+
+<div layout="row" >
+  <md-button class="md-fab" aria-label="Eat cake" layout-align="end end">
+    <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
+  </md-button>
+</div>
